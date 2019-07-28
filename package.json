@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=development TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack-dev-server",
-    "lint": "eslint src/** --ext .tsx"
+    "lint": "eslint src/** --ext .tsx",
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
