@@ -3,5 +3,6 @@ module.exports = function(api) {
 
   return {
     presets: ['@babel/react', '@babel/preset-typescript'],
+    plugins: [['babel-plugin-styled-components', { ssr: false }]],
   };
 };
