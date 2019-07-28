@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
+import PropTypes from 'prop-types';
 
-const App = () => (
-  <h1>hello world</h1>
-);
+type AppProps = {
+  what: string;
+};
+
+const App: React.FC<AppProps> = ({ what }): ReactElement => <h1>hello {what}</h1>;
+
+App.propTypes = {
+  what: PropTypes.string,
+};
 
 export default App;

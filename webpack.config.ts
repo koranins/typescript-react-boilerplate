@@ -29,4 +29,4 @@ const config: webpack.Configuration = {
   ]
 };
 
-module.exports = config;
+export default config;
