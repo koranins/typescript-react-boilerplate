@@ -1,9 +1,14 @@
 import React, { ReactElement } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', sansserif;
+  }
+`;
 
 const Title = styled.h1`
-  font-size: 1.5em;
   text-align: center;
   color: palevioletred;
 `;
@@ -12,7 +17,12 @@ type AppProps = {
   what: string;
 };
 
-const App: React.FC<AppProps> = ({ what }): ReactElement => <Title>hello {what}</Title>;
+const App: React.FC<AppProps> = ({ what }): ReactElement => (
+  <>
+    <GlobalStyle />
+    <Title>hello {what}</Title>
+  </>
+);
 
 App.propTypes = {
   what: PropTypes.string,
