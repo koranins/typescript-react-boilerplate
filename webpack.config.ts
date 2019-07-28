@@ -14,19 +14,17 @@ const config: webpack.Configuration = {
         enforce: 'pre',
         test: /\.js$/,
         loader: 'source-map-loader',
-      }
-    ]
+      },
+    ],
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js'],
   },
   output: {
     path: path.join(__dirname, '/dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
-  plugins: [
-    new HtmlWebpackPlugin({template: 'index.html'})
-  ]
+  plugins: [new HtmlWebpackPlugin({ template: 'index.html' })],
 };
 
 export default config;
