@@ -1,14 +1,13 @@
 import webpack from 'webpack';
 import path from 'path';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const config: webpack.Configuration = {
-  mode: 'development',
-  devtool: 'source-map',
-  entry: path.join(__dirname, '/src/index.tsx'),
+  entry: './src/index.tsx',
   output: {
-    path: path.join(__dirname, '/dist'),
     filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
@@ -23,6 +22,7 @@ const config: webpack.Configuration = {
     extensions: ['.ts', '.tsx', '.js'],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({ template: 'index.html' }),
     new webpack.ProgressPlugin(),
   ],
