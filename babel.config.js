@@ -2,7 +2,7 @@ module.exports = function(api) {
   api.cache(true);
 
   return {
-    presets: ['@babel/react', '@babel/preset-typescript'],
-    plugins: [['babel-plugin-styled-components', { ssr: false }]],
+    presets: ['@babel/react', '@babel/typescript'],
+    plugins: [['styled-components', { ssr: false }]],
   };
 };
