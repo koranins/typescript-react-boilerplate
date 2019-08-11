@@ -1,7 +1,6 @@
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { JSDOM } from 'jsdom';
-// import { any } from 'prop-types';
 
 const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
 const { window } = jsdom;
@@ -26,6 +25,9 @@ function setupDomEnvironment(): void {
   copyProps(window, global);
 }
 
-setupDomEnvironment();
+function setupEnzyme(): void {
+  configure({ adapter: new Adapter() });
+}
 
-configure({ adapter: new Adapter() });
+setupDomEnvironment();
+setupEnzyme();
