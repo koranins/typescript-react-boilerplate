@@ -9,3 +9,6 @@ parserOptions:
   sourceType: module  # Allows for the use of imports
 rules:
   "@typescript-eslint/prefer-interface": off
+settings:
+  react:
+    version: detect
