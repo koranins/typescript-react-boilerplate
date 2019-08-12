@@ -12,7 +12,7 @@ function copyProps(src, target): void {
   });
 }
 
-declare var global: any;
+declare var global: any; // eslint-disable-line @typescript-eslint/no-explicit-any
 
 function setupDomEnvironment(): void {
   global.window = window;
