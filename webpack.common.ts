@@ -23,7 +23,7 @@ const config: webpack.Configuration = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({ template: 'index.html' }),
+    new HtmlWebpackPlugin({ template: 'app-template.html' }),
     new webpack.ProgressPlugin(),
   ],
 };

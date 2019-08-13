@@ -14,6 +14,11 @@ function copyProps(src, target): void {
 
 declare var global: any; // eslint-disable-line @typescript-eslint/no-explicit-any
 
+/**
+ * Create JSDOM headless browser to create more realistic testing.
+ * The code in this function comes from the link below:
+ * https://github.com/airbnb/enzyme/blob/master/docs/guides/jsdom.md#using-enzyme-with-jsdom
+ */
 function setupDomEnvironment(): void {
   global.window = window;
   global.document = window.document;
@@ -25,6 +30,9 @@ function setupDomEnvironment(): void {
   copyProps(window, global);
 }
 
+/**
+ * Setup Enzyme for testing React components.
+ */
 function setupEnzyme(): void {
   configure({ adapter: new Adapter() });
 }
