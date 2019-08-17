@@ -10,7 +10,7 @@ describe('render', (): void => {
       '<div id="afterRoot"></div>',
     ].join();
 
-    require('./index');
+    require('./');
 
     const rootElement = document.createElement('div');
     rootElement.setAttribute('id', 'root');
