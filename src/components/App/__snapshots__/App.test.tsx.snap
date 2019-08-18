@@ -7,5 +7,45 @@ exports[`<App /> renders correctly 1`] = `
     hello 
     world
   </styled.h1>
+  <BrowserRouter>
+    <nav>
+      <ul>
+        <li>
+          <Link
+            to="/"
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/about/"
+          >
+            About
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/users/"
+          >
+            Users
+          </Link>
+        </li>
+      </ul>
+    </nav>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      component={[Function]}
+      path="/about/"
+    />
+    <Route
+      component={[Function]}
+      path="/users/"
+    />
+  </BrowserRouter>
 </Fragment>
 `;
