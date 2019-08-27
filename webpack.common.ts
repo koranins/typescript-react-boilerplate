@@ -1,4 +1,4 @@
-import webpack, { Loader } from 'webpack';
+import webpack, { Configuration, Loader } from 'webpack';
 import path from 'path';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -11,7 +11,7 @@ const typescriptReactLoader: Loader = {
   },
 };
 
-const config: webpack.Configuration = {
+const config: Configuration = {
   entry: './src/index.tsx',
   output: {
     filename: 'bundle.js',
