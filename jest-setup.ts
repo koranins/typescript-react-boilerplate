@@ -1,6 +1,6 @@
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { JSDOM } from 'jsdom';
+import { JSDOM, DOMWindow } from 'jsdom';
 
 const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
 const { window } = jsdom;
@@ -12,7 +12,13 @@ function copyProps(src, target): void {
   });
 }
 
-declare var global: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+interface Global extends AnimationFrameProvider {
+  window: DOMWindow;
+  document: Document;
+  navigator: Pick<Navigator, 'userAgent'>;
+}
+
+declare const global: Global;
 
 /**
  * Create JSDOM headless browser to create more realistic testing.
