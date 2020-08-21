@@ -1,5 +1,10 @@
 # typescript-react-boilerplate
 
+## 8/21/2020
+
+https://www.robertcooper.me/using-eslint-and-prettier-in-a-typescript-project
+
+## 7/28/2019
 
 https://medium.com/@francesco.agnoletto/how-to-set-up-typescript-with-babel-and-webpack-6fba1b6e72d5
 
