@@ -30,7 +30,7 @@ const config: Configuration = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({ template: 'app-template.html' }),
-  new webpack.ProgressPlugin({}),
+    new webpack.ProgressPlugin({}),
   ],
 };
 
