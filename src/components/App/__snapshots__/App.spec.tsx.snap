@@ -2,7 +2,7 @@
 
 exports[`<App /> renders correctly 1`] = `
 <Fragment>
-  <GlobalStyleComponent />
+  <Memo(GlobalStyleComponent) />
   <styled.h1>
     hello 
     world
